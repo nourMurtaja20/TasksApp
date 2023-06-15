@@ -14,8 +14,8 @@ let AppRouter = () => {
 
     console.log(loggedin);
     return <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/dashboard" element={loggedin ? <Dashboard /> : <Navigate to="/login" />} >
+        <Route path="/" element={<Login />} />
+        <Route path="/dashboard" element={loggedin ? <Dashboard /> : <Navigate to="/" />} >
             <Route path="/dashboard" element={<TasksPage />} />
             <Route path="/dashboard/newtask" element={<NewTasksPage />} />
             <Route path="/dashboard/categories" element={<CategoriesPage />} />
